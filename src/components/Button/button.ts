@@ -3,6 +3,8 @@ import { html, css, LitElement } from 'lit';
 
 @customElement('wc-button')
 class Button extends LitElement {
+    @property({ type: String }) label = '';
+
     static styles = css`
         button {
             display: inline-block;
@@ -19,13 +21,13 @@ class Button extends LitElement {
         }
     `;
 
+    handleClick(e: Event) {}
+    
     render() {
         return html`
-            <button @click=${this.handleClick}>Click me</button>
+            <button @click=${this.handleClick}>${this.label}</button>
         `;
     }
 
-    handleClick(e: Event) {
-        alert('Button clicked');
-    }
+   
 }

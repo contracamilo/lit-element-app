@@ -1,3 +1,7 @@
 import './components/Button/button'
 import './components/Table/table'
+import './components/Navbar/navbar'
 import './views/Home/home'
+import './views/About/about'
+import './views/Portfolio/portfolio'
+import './Router'

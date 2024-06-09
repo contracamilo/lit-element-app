@@ -4,13 +4,31 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Mi proyecto</title>
-    <script src='main.js' defer></script>
+    <title>Web components litElement</title>
+    <script src='main.js' defer;></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <wc-home></wc-home>
-    <wc-button></wc-button>
+    <wc-router>
+        <wc-navbar></wc-navbar>
+        <wc-viewport>
+            <wc-route path="/">
+                <wc-home></wc-home>
+            </wc-route>
+            <wc-route path="/about">
+                <wc-about></wc-about>
+            </wc-route>
+            <wc-route path="/portfolio">
+                <wc-portfolio></wc-portfolio>
+            </wc-route>
+        </wc-viewport>
+    </wc-router>
 </body>
 
 </html>
